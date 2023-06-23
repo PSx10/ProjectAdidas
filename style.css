@@ -1,0 +1,657 @@
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url(images/bc.jpg);
+    background-color: #FFFFFF;
+    background-size: cover;
+    background-position: center center;
+    transition: background-color 0.3s ease;
+}
+
+/*
+body::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+*/
+
+.container{
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 100%;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+}
+
+nav{
+    flex: 3;
+}
+
+.logo{
+    flex: 1;
+}
+
+.shopping__cart{
+    text-align: end;
+    flex: 1;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav>ul>li>a{
+    position: relative;
+}
+
+nav>ul>li>a::after{
+    content: "";
+    display: block;
+    width: 10px;
+    opacity: 0;
+    border-radius: 50% ;
+    height: 10px;
+    background-color: #c23766;
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.2s;
+}
+
+nav>ul>li>a:hover::after{
+    opacity: 1;
+}
+
+.headline{
+    font-size: 2rem;
+    letter-spacing: 20px;
+    
+}
+
+
+
+.middle{
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding-bottom: 290px;
+    overflow-x: hidden;
+}
+
+.middle h1{
+    font-size: 20rem;
+    line-height: 270px;
+    color: #1c357a;
+
+}
+
+.middle .shoe{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 1100px;
+    max-width: 90%;
+    transition: transform 1s;
+
+}
+
+.shoe:hover{
+    transform: scale(1.1);
+}
+
+.img{
+    width: 100%;
+}
+
+.date{
+    display: grid;
+    place-items: center;
+    font-size: 1.3rem;
+    opacity: 0.6;
+    margin-bottom: 40px;
+}
+
+.footer{
+    letter-spacing: 10px;
+    width: 1400px;
+    max-width: 100%;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.sides{
+    display: flex;
+    letter-spacing: 0;
+    justify-content: space-between;
+    width: 120px;
+    position: relative;
+}
+
+.sides a{
+    flex: 1;
+}
+
+.sides a:last-child{
+    text-align: end;
+}
+
+.sides a::after{
+    content: "";
+    display: block;
+    width: 100%;
+    opacity: 1;
+    height: 5px;
+    background-color: #314e8b;
+    z-index: -1;
+    transition: opacity 10s;
+}
+
+.btns{
+
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    padding-right: 10px;
+    padding-left: 170px;
+}
+
+.btn{
+    margin: 0 10px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 20px;
+    background-color: rgb(85, 79, 79);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    width: 250px;
+    max-width: 100%;
+    transition: transform .2s;
+}
+
+.btn:hover{
+    transform: scale(1.030);
+}
+
+.btn2{
+    background-color: #314e8b;
+}
+
+.color__Way button{
+    cursor: pointer;
+    font-size: 1em;
+    letter-spacing: 10px;
+    flex: 1;
+    color: #c23766;
+    background: none;
+    border: none;
+}
+
+/* Contact Us */
+
+input{
+    color: black;
+}
+
+
+
+.form_decoration_text{
+    margin-top: 10px;
+}
+
+.form_decoration{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.country{
+    color: black;
+}
+
+option{
+    color: black;
+}
+
+.submit{
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #677dac;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.submit:hover{
+    background-color: #677dac;
+    transition: 0.2s;
+}
+
+.form{
+    padding-top: 75px;
+}
+
+
+/* Store */
+
+
+.sepPhoto{
+    display: flex;
+    padding: 5em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    background-image: url(images/SepPhoto.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    margin-top: 3em;
+    height: 80vh;
+}
+
+.storeContext{
+    gap: 10px;
+}
+
+.storeContext #switch {
+    position: relative;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px 60px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.storeContext #switch::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -7px;
+    bottom: -7px;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid white;
+}
+
+.storeContext #switch:hover{
+    color: #5f5f5f;
+}
+
+
+/*    transform-style: preserve-3d;
+    transform: translateZ(-1px);
+
+*/
+
+
+
+
+.storeTiles{
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ 
+}
+
+.storeItem{
+    position: relative;
+    width: 33%;
+    min-width: 400px;
+    transition: transform 0.6s;
+    /*transition: all 1.0s linear;*/
+}
+
+
+.shoeName{
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.4;
+    padding: 0 10px;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    text-align: center;
+    transition: transform 0.6s;
+}
+
+.cart{
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.4;
+    padding: 0 10px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    text-align: center;
+    transition: transform 0.6s;
+    color: black;
+}
+
+.storeItem img{
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.storeItem:hover{
+    transform: scale(1.05);
+    z-index: 2;
+    
+}
+
+.storeItem :hover ~ .shoeName{
+    transform: scale(1.2);
+    z-index: 3;
+}
+
+.storeItem :hover ~ .cart{
+    transform: scale(1.2);
+    z-index: 3;
+}
+
+
+/*.storeItem:nth-child(1):hover{
+    transition: transform 0.6s;
+    transform: translateX(500px);
+    z-index: 9;
+}
+
+.storeItem:nth-child(3):hover{
+    transition: transform 0.6s;
+    transform: translateX(-500px);
+}
+
+/*.storeItem:nth-child(6):hover{
+    transform: translateX(-500px);
+}
+
+.storeItem:nth-child(9):hover{
+    transform: translateX(-500px);
+}
+
+*/
+
+/* Store */
+
+.aboutUsTiles{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 10em;
+    display: flex;
+ 
+}
+
+.aboutUsItem{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+
+#aboutUsItemPhoto{
+    border: 10px solid white;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 10px 10px #000;    
+    -moz-box-shadow: inset 0 0 10px 10px #000;
+    box-shadow: inset 0 0 10px 10px #000;
+    transform: translateX(0px);
+    transition: transform 0.6s;
+}
+
+.aboutUsText{
+    
+    max-width: 530px;
+}
+
+.aboutUsText h1{
+    color: white;
+}
+
+
+.aboutUsTiles2{
+    background-image: url(images/Adidas\ Company.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 70vh;
+    margin-top: 650px;
+}
+
+
+.aboutUsTiles3{
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+}
+
+.aboutUsItem3 img{
+    width: 100%;
+    margin-bottom: 10em;
+}
+
+
+/*
+.aboutUsItem:nth-child(1):hover{
+    transition: transform 0.6s;
+    transform: translateX(500px);
+    z-index: 9;
+}
+
+/* Back on top button */
+
+#scrollToTop {
+    display: block; /* Ukryj przycisk na początku */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    font-size: 14px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s; 
+    border-radius: 10px;
+  }
+
+
+/* Hamburger Menu  */
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+  }
+  
+  .menu.open {
+    right: 0;
+  }
+  
+  .menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .menu ul li {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .menu ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+
+#toggle{
+    display: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1134px) {
+  .footer{
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  .btns{
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .middle h1{
+      display: none;
+  }
+
+  .middle .shoe{
+    position: static;
+}
+
+    .middle{
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+
+
+  }
+
+  @media only screen and (max-width: 735px) {
+        nav{
+            display: none;
+        }
+
+        .menu-icon {
+            display: block;
+         }
+          
+
+  }
+
+
+  @media only screen and (max-width: 1216px) {
+    .storeItem{
+        width: 50%;
+        min-width: 250px;
+    }
+}
+
+    @media only screen and (max-width: 747px) {
+        .cart{
+            left: 44%;
+            right: 44%;
+            bottom: 15px;
+
+        }
+
+        .shoeName{
+            left: 12px;
+            right: 12px;
+        }
+}
+
+@media only screen and (max-width: 516px) {
+    .storeItem{
+        width: 100%;
+    }
+
+    
+    .shoeName{
+        left: 80px;
+        right: 80px;
+        bottom: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 349px) {
+    .sepPhoto{
+        justify-content: center;
+    }
+
+    .shoeName{
+        font-size: 0.8em;
+    }
+}
+
+
+
+@media only screen and (max-width: 550px) {
+    .aboutUsText{
+        font-size: 0.8em;
+    }
+
+}
